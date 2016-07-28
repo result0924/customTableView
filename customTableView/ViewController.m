@@ -28,7 +28,7 @@
             NSString *imgName = [NSString stringWithFormat:@"activity0%d", i];
             NSString *title = [NSString stringWithFormat:@"健康減重班%d", i];
             NSString *content = @"醫療人員需接受以上專業的訓練才能提供患者優質服務，並於院內提供優質的成長團體，促進病友間經驗與心得分享，加強病友的適應力與自我照顧能力，因此唯有專業且完整的醫療照顧，才能降低患者相關併發症的發生，並提高患者的生活品質。給予患者最好的醫療品質。為糖尿病患者的健康把關！";
-            NSDictionary *dict = @{@"imgName" : imgName, @"title" : title, @"content" : content};
+            NSDictionary *dict = @{@"imgName" : imgName, @"title" : title, @"content" : content, @"month" : @(i), @"price" : @(arc4random_uniform(2000))};
 
             [activityMAry addObject:dict];
         }
@@ -63,7 +63,7 @@
     }
 
     NSDictionary *activityDict = [self.activityAry objectAtIndex:indexPath.row];
-    [cell updateCellImage:activityDict[@"imgName"] title:activityDict[@"title"] content:activityDict[@"content"]];
+    [cell updateCellImage:activityDict[@"imgName"] title:activityDict[@"title"] content:activityDict[@"content"] month:activityDict[@"month"] price:activityDict[@"price"]];
 
     return cell;
 }

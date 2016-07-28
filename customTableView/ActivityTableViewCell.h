@@ -10,6 +10,10 @@
 
 @interface ActivityTableViewCell : UITableViewCell
 
-- (void)updateCellImage:(NSString *)imageName title:(NSString *)title content:(NSString *)content;
+- (void)updateCellImage:(NSString *)imageName
+                  title:(NSString *)title
+                content:(NSString *)content
+                  month:(NSNumber *)month
+                  price:(NSNumber *)price;
 
 @end

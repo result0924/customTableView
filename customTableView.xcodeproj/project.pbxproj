@@ -13,8 +13,8 @@
 		1800672A1D47750C00C8F887 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180067281D47750C00C8F887 /* Main.storyboard */; };
 		1800672C1D47750C00C8F887 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1800672B1D47750C00C8F887 /* Assets.xcassets */; };
 		1800672F1D47750C00C8F887 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1800672D1D47750C00C8F887 /* LaunchScreen.storyboard */; };
-		18723D2C1D49E27700F3320E /* ActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18723D2A1D49E27700F3320E /* ActivityTableViewCell.m */; };
-		18723D2D1D49E27700F3320E /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18723D2B1D49E27700F3320E /* ActivityTableViewCell.xib */; };
+		181E69541D49F1AF00EB231C /* ActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18723D2A1D49E27700F3320E /* ActivityTableViewCell.m */; };
+		183C9DA61D49F2A700AF1900 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18723D2B1D49E27700F3320E /* ActivityTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -146,7 +146,7 @@
 			files = (
 				1800672F1D47750C00C8F887 /* LaunchScreen.storyboard in Resources */,
 				1800672C1D47750C00C8F887 /* Assets.xcassets in Resources */,
-				18723D2D1D49E27700F3320E /* ActivityTableViewCell.xib in Resources */,
+				183C9DA61D49F2A700AF1900 /* ActivityTableViewCell.xib in Resources */,
 				1800672A1D47750C00C8F887 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,7 +160,7 @@
 			files = (
 				180067271D47750C00C8F887 /* ViewController.m in Sources */,
 				180067241D47750C00C8F887 /* AppDelegate.m in Sources */,
-				18723D2C1D49E27700F3320E /* ActivityTableViewCell.m in Sources */,
+				181E69541D49F1AF00EB231C /* ActivityTableViewCell.m in Sources */,
 				180067211D47750C00C8F887 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
