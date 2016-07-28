@@ -13,7 +13,8 @@
 		1800672A1D47750C00C8F887 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180067281D47750C00C8F887 /* Main.storyboard */; };
 		1800672C1D47750C00C8F887 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1800672B1D47750C00C8F887 /* Assets.xcassets */; };
 		1800672F1D47750C00C8F887 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1800672D1D47750C00C8F887 /* LaunchScreen.storyboard */; };
-		1800673B1D49A4BA00C8F887 /* ActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800673A1D49A4BA00C8F887 /* ActivityTableViewCell.m */; };
+		18723D2C1D49E27700F3320E /* ActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18723D2A1D49E27700F3320E /* ActivityTableViewCell.m */; };
+		18723D2D1D49E27700F3320E /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18723D2B1D49E27700F3320E /* ActivityTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +28,9 @@
 		1800672B1D47750C00C8F887 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1800672E1D47750C00C8F887 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		180067301D47750C00C8F887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		180067391D49A4BA00C8F887 /* ActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityTableViewCell.h; sourceTree = "<group>"; };
-		1800673A1D49A4BA00C8F887 /* ActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityTableViewCell.m; sourceTree = "<group>"; };
+		18723D291D49E27700F3320E /* ActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityTableViewCell.h; sourceTree = "<group>"; };
+		18723D2A1D49E27700F3320E /* ActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityTableViewCell.m; sourceTree = "<group>"; };
+		18723D2B1D49E27700F3320E /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +67,9 @@
 				180067231D47750C00C8F887 /* AppDelegate.m */,
 				180067251D47750C00C8F887 /* ViewController.h */,
 				180067261D47750C00C8F887 /* ViewController.m */,
-				180067391D49A4BA00C8F887 /* ActivityTableViewCell.h */,
-				1800673A1D49A4BA00C8F887 /* ActivityTableViewCell.m */,
+				18723D291D49E27700F3320E /* ActivityTableViewCell.h */,
+				18723D2A1D49E27700F3320E /* ActivityTableViewCell.m */,
+				18723D2B1D49E27700F3320E /* ActivityTableViewCell.xib */,
 				180067281D47750C00C8F887 /* Main.storyboard */,
 				1800672B1D47750C00C8F887 /* Assets.xcassets */,
 				1800672D1D47750C00C8F887 /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			files = (
 				1800672F1D47750C00C8F887 /* LaunchScreen.storyboard in Resources */,
 				1800672C1D47750C00C8F887 /* Assets.xcassets in Resources */,
+				18723D2D1D49E27700F3320E /* ActivityTableViewCell.xib in Resources */,
 				1800672A1D47750C00C8F887 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,7 +160,7 @@
 			files = (
 				180067271D47750C00C8F887 /* ViewController.m in Sources */,
 				180067241D47750C00C8F887 /* AppDelegate.m in Sources */,
-				1800673B1D49A4BA00C8F887 /* ActivityTableViewCell.m in Sources */,
+				18723D2C1D49E27700F3320E /* ActivityTableViewCell.m in Sources */,
 				180067211D47750C00C8F887 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

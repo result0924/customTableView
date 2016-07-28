@@ -10,4 +10,6 @@
 
 @interface ActivityTableViewCell : UITableViewCell
 
+- (void)updateCellImage:(NSString *)imageName title:(NSString *)title content:(NSString *)content;
+
 @end
