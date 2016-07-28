@@ -13,6 +13,7 @@
 		1800672A1D47750C00C8F887 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180067281D47750C00C8F887 /* Main.storyboard */; };
 		1800672C1D47750C00C8F887 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1800672B1D47750C00C8F887 /* Assets.xcassets */; };
 		1800672F1D47750C00C8F887 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1800672D1D47750C00C8F887 /* LaunchScreen.storyboard */; };
+		1800673B1D49A4BA00C8F887 /* ActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800673A1D49A4BA00C8F887 /* ActivityTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		1800672B1D47750C00C8F887 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1800672E1D47750C00C8F887 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		180067301D47750C00C8F887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		180067391D49A4BA00C8F887 /* ActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityTableViewCell.h; sourceTree = "<group>"; };
+		1800673A1D49A4BA00C8F887 /* ActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				180067231D47750C00C8F887 /* AppDelegate.m */,
 				180067251D47750C00C8F887 /* ViewController.h */,
 				180067261D47750C00C8F887 /* ViewController.m */,
+				180067391D49A4BA00C8F887 /* ActivityTableViewCell.h */,
+				1800673A1D49A4BA00C8F887 /* ActivityTableViewCell.m */,
 				180067281D47750C00C8F887 /* Main.storyboard */,
 				1800672B1D47750C00C8F887 /* Assets.xcassets */,
 				1800672D1D47750C00C8F887 /* LaunchScreen.storyboard */,
@@ -151,6 +156,7 @@
 			files = (
 				180067271D47750C00C8F887 /* ViewController.m in Sources */,
 				180067241D47750C00C8F887 /* AppDelegate.m in Sources */,
+				1800673B1D49A4BA00C8F887 /* ActivityTableViewCell.m in Sources */,
 				180067211D47750C00C8F887 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +306,7 @@
 				180067351D47750C00C8F887 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
