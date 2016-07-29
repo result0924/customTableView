@@ -15,6 +15,7 @@
 		1800672F1D47750C00C8F887 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1800672D1D47750C00C8F887 /* LaunchScreen.storyboard */; };
 		181E69541D49F1AF00EB231C /* ActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18723D2A1D49E27700F3320E /* ActivityTableViewCell.m */; };
 		183C9DA61D49F2A700AF1900 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18723D2B1D49E27700F3320E /* ActivityTableViewCell.xib */; };
+		18DE11A01D4B2B350042D5F8 /* activityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DE119E1D4B2B350042D5F8 /* activityDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		18723D291D49E27700F3320E /* ActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityTableViewCell.h; sourceTree = "<group>"; };
 		18723D2A1D49E27700F3320E /* ActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityTableViewCell.m; sourceTree = "<group>"; };
 		18723D2B1D49E27700F3320E /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = "<group>"; };
+		18DE119E1D4B2B350042D5F8 /* activityDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = activityDetailViewController.m; sourceTree = "<group>"; };
+		18DE119F1D4B2B350042D5F8 /* activityDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = activityDetailViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,8 @@
 				18723D291D49E27700F3320E /* ActivityTableViewCell.h */,
 				18723D2A1D49E27700F3320E /* ActivityTableViewCell.m */,
 				18723D2B1D49E27700F3320E /* ActivityTableViewCell.xib */,
+				18DE119F1D4B2B350042D5F8 /* activityDetailViewController.h */,
+				18DE119E1D4B2B350042D5F8 /* activityDetailViewController.m */,
 				180067281D47750C00C8F887 /* Main.storyboard */,
 				1800672B1D47750C00C8F887 /* Assets.xcassets */,
 				1800672D1D47750C00C8F887 /* LaunchScreen.storyboard */,
@@ -159,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				180067271D47750C00C8F887 /* ViewController.m in Sources */,
+				18DE11A01D4B2B350042D5F8 /* activityDetailViewController.m in Sources */,
 				180067241D47750C00C8F887 /* AppDelegate.m in Sources */,
 				181E69541D49F1AF00EB231C /* ActivityTableViewCell.m in Sources */,
 				180067211D47750C00C8F887 /* main.m in Sources */,
