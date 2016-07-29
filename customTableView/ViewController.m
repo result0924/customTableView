@@ -108,7 +108,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    [self performSegueWithIdentifier:@"activityDetailSegue" sender:nil];
 }
 
 #pragma mark - Orientation
@@ -123,6 +123,13 @@
 
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
     return UIInterfaceOrientationPortrait;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSIndexPath *path = [self.activityTableView indexPathForSelectedRow];
+    [[self navigationController] setNavigationBarHidden:YES animated:YES];
+    NSLog(@"row:%@", @(path.row));
 }
 
 @end
