@@ -127,9 +127,9 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSIndexPath *path = [self.activityTableView indexPathForSelectedRow];
+//    NSIndexPath *path = [self.activityTableView indexPathForSelectedRow];
     [[self navigationController] setNavigationBarHidden:YES animated:YES];
-    NSLog(@"row:%@", @(path.row));
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
 }
 
 @end

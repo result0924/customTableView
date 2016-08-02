@@ -15,6 +15,13 @@
 		1800672F1D47750C00C8F887 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1800672D1D47750C00C8F887 /* LaunchScreen.storyboard */; };
 		181E69541D49F1AF00EB231C /* ActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18723D2A1D49E27700F3320E /* ActivityTableViewCell.m */; };
 		183C9DA61D49F2A700AF1900 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18723D2B1D49E27700F3320E /* ActivityTableViewCell.xib */; };
+		185198DD1D4EED2B004788A9 /* textTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185198DB1D4EED2B004788A9 /* textTableViewCell.m */; };
+		185198DE1D4EED2B004788A9 /* textTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185198DC1D4EED2B004788A9 /* textTableViewCell.xib */; };
+		185198E21D4F0163004788A9 /* introDuceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185198E01D4F0163004788A9 /* introDuceTableViewCell.m */; };
+		185198E31D4F0163004788A9 /* introDuceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185198E11D4F0163004788A9 /* introDuceTableViewCell.xib */; };
+		185198E81D508986004788A9 /* dashItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185198E61D508986004788A9 /* dashItemTableViewCell.xib */; };
+		185198EB1D5093CA004788A9 /* dashItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185198EA1D5093CA004788A9 /* dashItemTableViewCell.m */; };
+		185198EE1D509572004788A9 /* CommonFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 185198ED1D509572004788A9 /* CommonFunction.m */; };
 		18DE11A01D4B2B350042D5F8 /* activityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DE119E1D4B2B350042D5F8 /* activityDetailViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +36,17 @@
 		1800672B1D47750C00C8F887 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1800672E1D47750C00C8F887 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		180067301D47750C00C8F887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		185198DA1D4EED2B004788A9 /* textTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = textTableViewCell.h; sourceTree = "<group>"; };
+		185198DB1D4EED2B004788A9 /* textTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = textTableViewCell.m; sourceTree = "<group>"; };
+		185198DC1D4EED2B004788A9 /* textTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = textTableViewCell.xib; sourceTree = "<group>"; };
+		185198DF1D4F0163004788A9 /* introDuceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = introDuceTableViewCell.h; sourceTree = "<group>"; };
+		185198E01D4F0163004788A9 /* introDuceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = introDuceTableViewCell.m; sourceTree = "<group>"; };
+		185198E11D4F0163004788A9 /* introDuceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = introDuceTableViewCell.xib; sourceTree = "<group>"; };
+		185198E61D508986004788A9 /* dashItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = dashItemTableViewCell.xib; sourceTree = "<group>"; };
+		185198E91D5093BC004788A9 /* dashItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dashItemTableViewCell.h; sourceTree = "<group>"; };
+		185198EA1D5093CA004788A9 /* dashItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dashItemTableViewCell.m; sourceTree = "<group>"; };
+		185198EC1D509572004788A9 /* CommonFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonFunction.h; sourceTree = "<group>"; };
+		185198ED1D509572004788A9 /* CommonFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonFunction.m; sourceTree = "<group>"; };
 		18723D291D49E27700F3320E /* ActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityTableViewCell.h; sourceTree = "<group>"; };
 		18723D2A1D49E27700F3320E /* ActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityTableViewCell.m; sourceTree = "<group>"; };
 		18723D2B1D49E27700F3320E /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = "<group>"; };
@@ -75,11 +93,22 @@
 				18723D2B1D49E27700F3320E /* ActivityTableViewCell.xib */,
 				18DE119F1D4B2B350042D5F8 /* activityDetailViewController.h */,
 				18DE119E1D4B2B350042D5F8 /* activityDetailViewController.m */,
+				185198DA1D4EED2B004788A9 /* textTableViewCell.h */,
+				185198DB1D4EED2B004788A9 /* textTableViewCell.m */,
+				185198DC1D4EED2B004788A9 /* textTableViewCell.xib */,
+				185198DF1D4F0163004788A9 /* introDuceTableViewCell.h */,
+				185198E01D4F0163004788A9 /* introDuceTableViewCell.m */,
+				185198E11D4F0163004788A9 /* introDuceTableViewCell.xib */,
+				185198E91D5093BC004788A9 /* dashItemTableViewCell.h */,
+				185198EA1D5093CA004788A9 /* dashItemTableViewCell.m */,
+				185198E61D508986004788A9 /* dashItemTableViewCell.xib */,
 				180067281D47750C00C8F887 /* Main.storyboard */,
 				1800672B1D47750C00C8F887 /* Assets.xcassets */,
 				1800672D1D47750C00C8F887 /* LaunchScreen.storyboard */,
 				180067301D47750C00C8F887 /* Info.plist */,
 				1800671F1D47750C00C8F887 /* Supporting Files */,
+				185198EC1D509572004788A9 /* CommonFunction.h */,
+				185198ED1D509572004788A9 /* CommonFunction.m */,
 			);
 			path = customTableView;
 			sourceTree = "<group>";
@@ -150,8 +179,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1800672F1D47750C00C8F887 /* LaunchScreen.storyboard in Resources */,
+				185198E31D4F0163004788A9 /* introDuceTableViewCell.xib in Resources */,
+				185198E81D508986004788A9 /* dashItemTableViewCell.xib in Resources */,
 				1800672C1D47750C00C8F887 /* Assets.xcassets in Resources */,
 				183C9DA61D49F2A700AF1900 /* ActivityTableViewCell.xib in Resources */,
+				185198DE1D4EED2B004788A9 /* textTableViewCell.xib in Resources */,
 				1800672A1D47750C00C8F887 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,8 +197,12 @@
 			files = (
 				180067271D47750C00C8F887 /* ViewController.m in Sources */,
 				18DE11A01D4B2B350042D5F8 /* activityDetailViewController.m in Sources */,
+				185198EE1D509572004788A9 /* CommonFunction.m in Sources */,
+				185198DD1D4EED2B004788A9 /* textTableViewCell.m in Sources */,
 				180067241D47750C00C8F887 /* AppDelegate.m in Sources */,
+				185198EB1D5093CA004788A9 /* dashItemTableViewCell.m in Sources */,
 				181E69541D49F1AF00EB231C /* ActivityTableViewCell.m in Sources */,
+				185198E21D4F0163004788A9 /* introDuceTableViewCell.m in Sources */,
 				180067211D47750C00C8F887 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

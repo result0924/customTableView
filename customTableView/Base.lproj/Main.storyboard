@@ -74,9 +74,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0HP-Va-TmD">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="0HP-Va-TmD">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="hII-Cn-LrC" id="568-UW-zx6"/>
                                     <outlet property="delegate" destination="hII-Cn-LrC" id="9cn-UY-0qI"/>
@@ -123,14 +123,14 @@
                                 <exclude reference="JTf-fI-DRE"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="FGb-Xq-piY"/>
-                                <exclude reference="W9K-TM-tzU"/>
-                                <exclude reference="op9-dR-cY0"/>
+                                <exclude reference="8aK-8Y-mK6"/>
+                                <exclude reference="vQs-f4-Hom"/>
                                 <exclude reference="GmM-h1-daw"/>
                                 <exclude reference="Z2l-ZS-1oA"/>
                                 <exclude reference="hzi-6R-wbS"/>
-                                <exclude reference="8aK-8Y-mK6"/>
-                                <exclude reference="vQs-f4-Hom"/>
+                                <exclude reference="FGb-Xq-piY"/>
+                                <exclude reference="W9K-TM-tzU"/>
+                                <exclude reference="op9-dR-cY0"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -139,14 +139,14 @@
                                 <include reference="JTf-fI-DRE"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="FGb-Xq-piY"/>
-                                <include reference="W9K-TM-tzU"/>
-                                <include reference="op9-dR-cY0"/>
+                                <exclude reference="8aK-8Y-mK6"/>
+                                <include reference="vQs-f4-Hom"/>
                                 <include reference="GmM-h1-daw"/>
                                 <include reference="Z2l-ZS-1oA"/>
                                 <include reference="hzi-6R-wbS"/>
-                                <exclude reference="8aK-8Y-mK6"/>
-                                <include reference="vQs-f4-Hom"/>
+                                <include reference="FGb-Xq-piY"/>
+                                <include reference="W9K-TM-tzU"/>
+                                <include reference="op9-dR-cY0"/>
                             </mask>
                         </variation>
                     </view>
