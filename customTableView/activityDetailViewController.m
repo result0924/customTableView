@@ -18,6 +18,11 @@
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) UIPageControl *pageControl;
 @property (nonatomic, strong) NSDictionary *activityDict;
+@property (nonatomic, assign) BOOL extendSuit;
+@property (nonatomic, assign) BOOL extendService;
+@property (nonatomic, assign) BOOL extendCoordinate;
+@property (nonatomic, strong) UIView *arrowView;
+- (CAShapeLayer *)arrowMaskIsUp:(BOOL)isDown frame:(CGRect)frame;
 
 @end
 
@@ -54,14 +59,26 @@
     if (0 == section) {
         return 2;
     } else if (2 == section) {
-        NSArray *suitArray = self.activityDict[@"suitInfo"];
-        return suitArray.count;
+        if (self.extendSuit) {
+            NSArray *suitArray = self.activityDict[@"suitInfo"];
+            return suitArray.count;
+        } else {
+            return 0;
+        }
     } else if (3 == section) {
-        NSArray *serviceAry = self.activityDict[@"serviceInfo"];
-        return serviceAry.count;
+        if (self.extendService) {
+            NSArray *serviceAry = self.activityDict[@"serviceInfo"];
+            return serviceAry.count;
+        } else {
+            return 0;
+        }
     } else if (4 == section) {
-        NSArray *coordinateAry = self.activityDict[@"coordinateInfo"];
-        return coordinateAry.count;
+        if (self.extendCoordinate) {
+            NSArray *coordinateAry = self.activityDict[@"coordinateInfo"];
+            return coordinateAry.count;
+        } else {
+            return 0;
+        }
     }
 
     return 1;
@@ -92,7 +109,7 @@
             if (0 == indexPath.row) {
                 [textCell updateTextFont:[UIFont boldSystemFontOfSize:24.0f] titleColor:[UIColor colorWithRed:68.0f / 255.0f green:68.0f / 255.0f blue:68.0f / 255.0f alpha:1.0f] text:self.activityDict[@"title"]];
             } else {
-                [textCell updateTextFont:[UIFont systemFontOfSize:16.0f] titleColor:[UIColor orangeColor] text:self.activityDict[@"titleDetail"]];
+                [textCell updateTextFont:[UIFont systemFontOfSize:17.0f] titleColor:[UIColor orangeColor] text:self.activityDict[@"titleDetail"]];
             }
         }
     } else if ([CellIdentifier isEqualToString:@"introDuceTableViewCell"]) {
@@ -166,7 +183,14 @@
         UIView *introView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, [UIScreen mainScreen].bounds.size.width, 44.0f)];
         introView.backgroundColor = [UIColor whiteColor];
 
-        UILabel *introLabel = [[UILabel alloc] initWithFrame:CGRectMake(16.0f, 0.0f, [UIScreen mainScreen].bounds.size.width - 32.0f, 44.0f)];
+        if (2 == section || 3 == section || 4 == section) {
+            self.arrowView = [[UIView alloc] initWithFrame:CGRectMake(290.0f, 17.0f, 20.0f, 20.0f)];
+            self.arrowView.backgroundColor = [UIColor lightGrayColor];
+            [introView addSubview:self.arrowView];
+        }
+
+
+        UILabel *introLabel = [[UILabel alloc] initWithFrame:CGRectMake(16.0f, 0.0f, [UIScreen mainScreen].bounds.size.width - 52.0f, 44.0f)];
         introLabel.font = [UIFont systemFontOfSize:18.0f];
 
         switch (section) {
@@ -175,19 +199,27 @@
                 break;
             case 2:
                 introLabel.text = self.activityDict[@"suit"];
+                self.arrowView.layer.mask = [self arrowMaskIsUp:!self.extendSuit frame:self.arrowView.bounds];
                 break;
             case 3:
                 introLabel.text = self.activityDict[@"service"];
+                self.arrowView.layer.mask = [self arrowMaskIsUp:!self.extendService frame:self.arrowView.bounds];
                 break;
             case 4:
                 introLabel.text = self.activityDict[@"coordinate"];
+                self.arrowView.layer.mask = [self arrowMaskIsUp:!self.extendCoordinate frame:self.arrowView.bounds];
                 break;
             default:
                 break;
         }
 
-
         [introView addSubview:introLabel];
+        introView.tag = section;
+
+        UITapGestureRecognizer *singleFingerTap =
+        [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                action:@selector(handleSingleTap:)];
+        [introView addGestureRecognizer:singleFingerTap];
         return introView;
     }
 }
@@ -206,22 +238,22 @@
     CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
     CGFloat padding = 32.0f;
     CGFloat imageHeight = 140.0f;
-    CGFloat itemPadding = 50.0f;
+    CGFloat itemPadding = 60.0f;
 
     if (0 == indexPath.section) {
         if (0 == indexPath.row) {
            return [CommonFunction setLabelHeight:self.activityDict[@"title"] minHeight:44.0f font:[UIFont boldSystemFontOfSize:24.0f] and_MaxWidth:screenWidth - padding];
         } else if (1 == indexPath.row) {
-           return [CommonFunction setLabelHeight:self.activityDict[@"titleDetail"] minHeight:30.0f font:[UIFont systemFontOfSize:16.0f] and_MaxWidth:screenWidth - padding];
+           return [CommonFunction setLabelHeight:self.activityDict[@"titleDetail"] minHeight:30.0f font:[UIFont systemFontOfSize:17.0f] and_MaxWidth:screenWidth - padding];
         }
     } else if (1 == indexPath.section) {
-        return imageHeight + [CommonFunction setLabelHeight:self.activityDict[@"introduceContent"] minHeight:44.0f font:[UIFont systemFontOfSize:14.0f] and_MaxWidth:[UIScreen mainScreen].bounds.size.width - padding] + 20.0f;
+        return imageHeight + [CommonFunction setLabelHeight:self.activityDict[@"introduceContent"] minHeight:44.0f font:[UIFont systemFontOfSize:15.0f] and_MaxWidth:[UIScreen mainScreen].bounds.size.width - padding] + 20.0f;
     } else if (2 == indexPath.section) {
-        return [CommonFunction setLabelHeight:[self.activityDict[@"suitInfo"] objectAtIndex:indexPath.row] minHeight:30.0f font:[UIFont systemFontOfSize:14.0f] and_MaxWidth:[UIScreen mainScreen].bounds.size.width - itemPadding];
+        return [CommonFunction setLabelHeight:[self.activityDict[@"suitInfo"] objectAtIndex:indexPath.row] minHeight:30.0f font:[UIFont systemFontOfSize:15.0f] and_MaxWidth:[UIScreen mainScreen].bounds.size.width - itemPadding];
     } else if (3 == indexPath.section) {
-        return [CommonFunction setLabelHeight:[self.activityDict[@"serviceInfo"] objectAtIndex:indexPath.row] minHeight:30.0f font:[UIFont systemFontOfSize:14.0f] and_MaxWidth:[UIScreen mainScreen].bounds.size.width - itemPadding];
+        return [CommonFunction setLabelHeight:[self.activityDict[@"serviceInfo"] objectAtIndex:indexPath.row] minHeight:30.0f font:[UIFont systemFontOfSize:15.0f] and_MaxWidth:[UIScreen mainScreen].bounds.size.width - itemPadding];
     } else if (4 == indexPath.section) {
-        return [CommonFunction setLabelHeight:[self.activityDict[@"coordinateInfo"] objectAtIndex:indexPath.row] minHeight:30.0f font:[UIFont systemFontOfSize:14.0f] and_MaxWidth:[UIScreen mainScreen].bounds.size.width - itemPadding];
+        return [CommonFunction setLabelHeight:[self.activityDict[@"coordinateInfo"] objectAtIndex:indexPath.row] minHeight:30.0f font:[UIFont systemFontOfSize:15.0f] and_MaxWidth:[UIScreen mainScreen].bounds.size.width - itemPadding];
     }
     return 44.0f;
 }
@@ -262,5 +294,74 @@
     [self.scrollView scrollRectToVisible:frame animated:YES];
 }
 
+- (void)handleSingleTap:(UITapGestureRecognizer *)recognizer {
+    UIView *view = recognizer.view;
+    NSIndexSet *indexSet = [[NSIndexSet alloc] initWithIndex:view.tag];
+
+    switch (view.tag) {
+        case 2: {
+            self.extendSuit = !self.extendSuit;
+            [self.detailTableVIew reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
+
+            if (self.extendSuit && !self.extendService && !self.extendCoordinate) {
+                NSArray *suitAry = self.activityDict[@"suitInfo"];
+                [self.detailTableVIew scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:suitAry.count - 1 inSection:view.tag] atScrollPosition:UITableViewScrollPositionBottom animated:NO];
+            }
+        }
+            break;
+        case 3: {
+            self.extendService = !self.extendService;
+            [self.detailTableVIew reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
+
+            if (self.extendService && !self.extendCoordinate) {
+                NSArray *serviceAry = self.activityDict[@"serviceInfo"];
+                [self.detailTableVIew scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:serviceAry.count - 1 inSection:view.tag] atScrollPosition:UITableViewScrollPositionBottom animated:NO];
+            }
+        }
+            break;
+        case 4: {
+            self.extendCoordinate = !self.extendCoordinate;
+
+            [self.detailTableVIew reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
+
+            if (self.extendCoordinate) {
+                NSArray *coordinateAry = self.activityDict[@"coordinateInfo"];
+                [self.detailTableVIew scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:coordinateAry.count - 1 inSection:view.tag] atScrollPosition:UITableViewScrollPositionBottom animated:NO];
+            }
+        }
+            break;
+
+        default:
+            break;
+    }
+}
+
+- (CAShapeLayer *)arrowMaskIsUp:(BOOL)isDown frame:(CGRect)frame {
+    UIBezierPath *path = [UIBezierPath new];
+
+    if (isDown) {
+        [path moveToPoint:(CGPoint){2, 0}];
+        [path addLineToPoint:(CGPoint){10, 10}];
+        [path addLineToPoint:(CGPoint){18, 0}];
+        [path addLineToPoint:(CGPoint){16, 0}];
+        [path addLineToPoint:(CGPoint){10, 8}];
+        [path addLineToPoint:(CGPoint){4, 0}];
+        [path addLineToPoint:(CGPoint){2, 0}];
+    } else {
+        [path moveToPoint:(CGPoint){2, 10}];
+        [path addLineToPoint:(CGPoint){10, 0}];
+        [path addLineToPoint:(CGPoint){18, 10}];
+        [path addLineToPoint:(CGPoint){16, 10}];
+        [path addLineToPoint:(CGPoint){10, 2}];
+        [path addLineToPoint:(CGPoint){4, 10}];
+        [path addLineToPoint:(CGPoint){2, 10}];
+    }
+
+    CAShapeLayer *mask = [CAShapeLayer new];
+    mask.frame = frame;
+    mask.path = path.CGPath;
+
+    return mask;
+}
 
 @end

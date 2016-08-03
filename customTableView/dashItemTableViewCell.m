@@ -32,7 +32,7 @@
     self.titleLabel.text = content;
 
     if (30.0f == [CommonFunction setLabelHeight:content minHeight:30.0f font:[UIFont systemFontOfSize:14.0f] and_MaxWidth:270.0f]) {
-        self.dashTopConstraint.constant = 1.0f;
+        self.dashTopConstraint.constant = 7.0f;
     }
 }
 

@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mG-pL-NdP">
-                        <rect key="frame" x="19" y="15" width="10" height="10"/>
+                        <rect key="frame" x="19" y="5" width="10" height="10"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="10" id="gLY-gc-fl8"/>
                             <constraint firstAttribute="height" constant="10" id="q7p-BM-po2"/>
@@ -27,18 +27,18 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucR-9V-Bro">
-                        <rect key="frame" x="34" y="6" width="262" height="37"/>
+                        <rect key="frame" x="34" y="0.0" width="262" height="43"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="ucR-9V-Bro" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="WAv-hT-P5M"/>
+                    <constraint firstItem="ucR-9V-Bro" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="WAv-hT-P5M"/>
                     <constraint firstAttribute="trailingMargin" secondItem="ucR-9V-Bro" secondAttribute="trailing" constant="16" id="gQH-Fo-jRz"/>
                     <constraint firstAttribute="bottom" secondItem="ucR-9V-Bro" secondAttribute="bottom" id="iVJ-Qy-xMb"/>
                     <constraint firstItem="ucR-9V-Bro" firstAttribute="leading" secondItem="4mG-pL-NdP" secondAttribute="trailing" constant="5" id="lhn-dD-f3i"/>
-                    <constraint firstItem="4mG-pL-NdP" firstAttribute="top" secondItem="ucR-9V-Bro" secondAttribute="top" multiplier="8:5" constant="5" id="r4H-Mq-RaH"/>
+                    <constraint firstItem="4mG-pL-NdP" firstAttribute="top" secondItem="ucR-9V-Bro" secondAttribute="top" multiplier="7:3" constant="5" id="r4H-Mq-RaH"/>
                     <constraint firstItem="ucR-9V-Bro" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="26" id="rjU-TX-BqB"/>
                 </constraints>
             </tableViewCellContentView>
